@@ -6,6 +6,7 @@ import { SecondComponentComponent } from './second-component/second-component.co
 import { FirstComponentComponent } from './first-component/first-component.component';
 import {ItemState} from "./store/state";
 import {NgxsModule} from "@ngxs/store";
+import {NgxsReduxDevtoolsPluginModule} from "@ngxs/devtools-plugin";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import {NgxsModule} from "@ngxs/store";
   ],
   imports: [
     BrowserModule,
-    NgxsModule.forRoot([ItemState])
+    NgxsModule.forRoot([ItemState]), NgxsReduxDevtoolsPluginModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
