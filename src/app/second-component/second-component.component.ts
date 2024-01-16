@@ -17,7 +17,7 @@ export class SecondComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.items$ = this.store.select(ItemState.items).pipe(
-      tap (items => items.push({name: 'Hoi'})), // Is this pushed to the store?
+      tap (items => items.push({name: 'in tap from Second Component'})), // Not using an action, but it is still added to the store?
     )
   }
 }

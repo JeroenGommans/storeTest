@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {Store} from "@ngxs/store";
 import {AddItemAction} from "./store/actions";
+import {map, Observable, tap} from "rxjs";
+import {Item} from "./item";
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,11 @@ import {AddItemAction} from "./store/actions";
 export class AppComponent {
   title = 'storeTest';
 
+
   constructor(private store: Store) {
   }
 
   addItem() {
-    this.store.dispatch(new AddItemAction({name: 'Hallo'}) );
+    this.store.dispatch(new AddItemAction({name: 'Dispatch from App Component'}) );
   }
 }

@@ -16,4 +16,3 @@ export class FirstComponentComponent {
   constructor(private store: Store) {
   }
 }
-
